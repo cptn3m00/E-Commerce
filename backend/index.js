@@ -34,7 +34,7 @@ app.post("/upload", upload.single('product'), (req, res) => {
 })
 
 
-// Route for Images folder
+// Route for Images folder 
 app.use('/images', express.static('upload/images'));
 
 
