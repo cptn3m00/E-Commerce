@@ -15,7 +15,7 @@ app.use(cors());
 
 const uri = process.env.MONGODB_URI;
 
-mongoose.connect("mongodb+srv://shopify:akriti.o2@cluster0.xgsevbm.mongodb.net/e-commerce")
+// mongoose.connect("mongodb+srv://shopify:akriti.o2@cluster0.xgsevbm.mongodb.net/e-commerce")
 
 
 
