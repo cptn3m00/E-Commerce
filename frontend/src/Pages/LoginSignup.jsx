@@ -12,7 +12,7 @@ const LoginSignup = () => {
 
   const login = async () => {
     let dataObj;
-    await fetch('http://localhost:4000/login', {
+    await fetch('https://e-commerce-eo8w.onrender.com/login', {
       method: 'POST',
       headers: {
         Accept:'application/form-data',
@@ -35,7 +35,7 @@ const LoginSignup = () => {
 
   const signup = async () => {
     let dataObj;
-    await fetch('http://localhost:4000/signup', {
+    await fetch('https://e-commerce-eo8w.onrender.com/signup', {
       method: 'POST',
       headers: {
         Accept:'application/form-data',
@@ -73,7 +73,7 @@ const LoginSignup = () => {
         :<p className="loginsignup-login">Already have an account? <span onClick={()=>{setState("Login")}}>Login here</span></p>}
 
         <div className="loginsignup-agree">
-          <input type="checkbox" name="" id="" />
+          <input type="checkbox" name="" id="" required/>
           <p>By continuing, i agree to the terms of use & privacy policy.</p>
         </div>
       </div>
