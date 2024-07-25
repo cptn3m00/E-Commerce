@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const port= 4000;
 const express = require("express");
 const app = express();
@@ -11,6 +13,7 @@ const cors = require("cors");
 app.use(express.json());
 app.use(cors());
 
+const uri = process.env.MONGODB_URI;
 
 mongoose.connect("mongodb+srv://shopify:akriti.o2@cluster0.xgsevbm.mongodb.net/e-commerce")
 
