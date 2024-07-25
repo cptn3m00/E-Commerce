@@ -11,7 +11,9 @@ const cors = require("cors");
 const port = process.env.PORT || 4000;
 
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin: ['https://e-commerce-1-3iw1.onrender.com', 'https://urbancart-admin.onrender.com']
+}));
 
 const uri = process.env.MONGODB_URI;
 
