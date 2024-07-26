@@ -13,10 +13,15 @@ const port = process.env.PORT || 4000;
 app.use(express.json());
 app.use(cors({
   origin: ['https://e-commerce-1-3iw1.onrender.com', 'https://urbancart-admin.onrender.com'],
-  credentials: true
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization', 'auth-token']
 }));
 
 const uri = process.env.MONGODB_URI;
+mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => console.log("MongoDB connected"))
+  .catch(err => console.log(err));
 
 
 
